@@ -1,0 +1,30 @@
+ul.right.hide-on-med-and-down {
+    grid-template-columns: repeat(3, auto);
+}
+
+.nav-wrapper img {
+    height: 150px;
+}
+nav.nav2 {
+    background-color: white;
+    color:black;
+}
+.nav2 li a{
+    color:black;
+}
+ul.filter-nav {
+    margin-left: 200px;
+}
+nav .sidenav-trigger {
+    float: right;
+}
+div.grid-img {   
+    margin-top: 100px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-gap: 10px;
+    max-width: 100%;
+}
+div.grid-img img {   
+    max-width: 100%;
+}
