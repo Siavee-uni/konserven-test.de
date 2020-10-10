@@ -10,4 +10,5 @@
 readfile('html/header.html');
 require_once'html/list.php';
 readfile('html/footer.html');
+$uri =  __DIR__;
 ?>

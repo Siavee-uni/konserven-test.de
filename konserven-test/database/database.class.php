@@ -6,7 +6,7 @@ class Database
   private $db_name = 'products';
   private $username = 'root';
   private $password = '';
-  private $conn;
+  protected $conn;
 
   // DB Connect
   public function __construct()
@@ -25,14 +25,15 @@ class Database
   {
     $columns = implode(", ",array_keys($data));
     $values  = "'" . implode("', '", $data) . "'";
-    $sql = "INSERT INTO `konserven2`($columns) VALUES ($values)";
+    $sql = "INSERT INTO `konserven`($columns) VALUES ($values)";
 
     $this->conn->exec($sql);
     return "New record created successfully";
   }
 
-  function get () {
-    $sql = "SELECT name, bio, score, date, image FROM konserven2";
+  function get (string $columns, string $table ) {
+
+    $sql = "SELECT $columns FROM $table"; 
     $sth = $this->conn->prepare($sql);
     $sth->execute();
 

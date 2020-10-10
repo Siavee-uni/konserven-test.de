@@ -1,7 +1,9 @@
 ul.right.hide-on-med-and-down {
     grid-template-columns: repeat(3, auto);
 }
-
+nav {
+    background-color: #cd4c2a;
+}
 .nav-wrapper img {
     height: 150px;
 }
@@ -27,4 +29,51 @@ div.grid-img {
 }
 div.grid-img img {   
     max-width: 100%;
+}
+.card .card-image .card-title {
+    padding: 5px;
+    background-color: #68a471;
+}
+.card .card-content {
+    padding: 5px 5px 5px 10px;
+    border-radius: 0 0 2px 2px;
+}
+
+.card-content .symbols img {
+    width: 40px;
+    height: 45px;
+    padding-top: 10px;
+    float: right;
+}
+
+/* over */
+.container .card{
+    position: relative;
+    cursor: pointer;
+    box-shadow:none;
+}
+
+.container .card .face{
+    transition: 0.5s;
+}
+
+.container .card .face.face1{
+    position: relative;
+    z-index: 1;
+    transform: translateY(100px);
+}
+
+.container .card:hover .face.face1{
+    transform: translateY(0);
+}
+
+.container .card .face.face1 .card-image img{
+    max-height: 300px;
+}
+
+.container .card .face.face2{
+    position: relative;
+    padding-top: 10px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.4);
+    transform: translateY(-10px);
 }
