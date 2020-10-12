@@ -1,0 +1,108 @@
+ul.right.hide-on-med-and-down {
+    grid-template-columns: repeat(3, auto);
+}
+nav {
+    background-color: #cd4c2a;
+}
+.nav-wrapper img {
+    height: 150px;
+}
+nav.nav2 {
+    background-color: white;
+    color: black;
+}
+.nav2 li a {
+    color: black;
+}
+ul.filter-nav {
+    margin-left: 200px;
+}
+nav .sidenav-trigger {
+    float: right;
+}
+div.grid-img {
+    margin-top: 50px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-gap: 10px;
+    max-width: 100%;
+}
+div.grid-img img {
+    max-width: 100%;
+}
+.card .card-image .card-title {
+    padding: 5px;
+    background-color: rgb(74, 122, 91, 0.8);
+    font-size: 20px;
+}
+.card .card-content {
+    padding: 5px 5px 5px 10px;
+    border-radius: 0 0 2px 2px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.4);
+    background-color: white;
+}
+.face.face1 {
+    margin-bottom: 10px;
+}
+.face.face2 {
+    padding: 2px 0 2px 10px;
+    box-shadow: 0 0 2px rgba(0, 0, 0, 0.4);
+    background-color: white;
+    max-height: 0;
+    overflow: hidden;
+}
+
+.card-content .symbols img {
+    width: 40px;
+    height: 45px;
+    padding-top: 10px;
+    float: right;
+}
+.card .card-content p:last-child {
+    font-size: 10px;
+}
+.card .card-content p:nth-child(3) {
+    border-bottom: 1px solid;
+    padding-bottom: 5px;
+}
+
+/* over */
+.container .card {
+    position: relative;
+    cursor: pointer;
+    box-shadow: none;
+}
+
+.container .card .face {
+    transition: 0.5s;
+}
+
+.container .card .face.face1 {
+    position: relative;
+    z-index: 1;
+    transform: translateY(100px);
+}
+
+.container .card:hover .face.face1 {
+    transform: translateY(0);
+}
+
+.container .card .face.face2 {
+    position: relative;
+    padding-top: 10px;
+    transform: translateY(-10px);
+}
+
+/* info box */
+
+section.infobox {
+    box-shadow: 0 16px 24px 2px rgba(0, 0, 0, 0.14),
+        0 6px 30px 5px rgba(0, 0, 0, 0.12), 0 8px 10px -5px rgba(0, 0, 0, 0.2);
+    border-radius: 6px;
+    background: #ffffff;
+    overflow: hidden;
+    margin-top: 50px;
+}
+section.infobox p {
+    padding: 0 10px 0 10px;
+}
