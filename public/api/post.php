@@ -1,9 +1,8 @@
 <?php
 $url = dirname(__DIR__, 2);
 include_once $url . '/database/database.class.php';
-$date = new DateTime();
-$timestamp = $date->getTimestamp();
 
+// file upload
 $target_dir = "../uploads/";
 $target_file = $target_dir . basename($_FILES["image"]["name"]);
 $imageFileType = strtolower(pathinfo($target_file, PATHINFO_EXTENSION));
@@ -15,12 +14,12 @@ $data = [
     'description' => $_POST["description"],
     'filling' => $_POST["filling"],
     'score' => $_POST["score"],
-    /* 'date' => date("Y-m-d", $timestamp), */
     'image' => basename($_FILES["image"]["name"])
 ];
+
 move_uploaded_file($_FILES["image"]["tmp_name"], $target_file);
 $connection = new Database;
-$message = $connection->insert($data);
+$message = $connection->create($data);
 
 var_dump($message);
-header("Location: https://www.konserven-tests.de");
+header("Location: http://localhost/konserven-test.de/public/");

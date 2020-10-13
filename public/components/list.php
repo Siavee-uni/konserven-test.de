@@ -1,15 +1,15 @@
-<script type="text/javascript" src="js/main.js"></script>
 <?php
 $url = dirname(__DIR__, 2);
 include_once $url . '/database/database.class.php';
 include_once $url . '/database/migration.class.php';
+
 // get data
 $columns = "`name`,`bio`,`score`,`image`,`vegan`,`filling`,`description`,`created`";
 $table = "`konserven`";
 
 $connection = new Database;
-new Migration;
-$data = $connection->get($columns, $table);
+/* new Migration; */
+$data = $connection->read($columns, $table);
 // loop
 echo '<div class="container grid-img">';
 
@@ -23,6 +23,12 @@ foreach ($data as $can) : ?>
         <div class="col s12">
             <div class="card">
                 <div class="face face1">
+                    <?php if ($_SESSION["login"]) : ?>
+                        <div>
+                            <button>edit</button>
+                            <button>delete</button>
+                        </div>
+                    <?php endif ?>
                     <div class="card-image face">
                         <img src="<?= $imgPath ?>" alt="konserve">
                         <span class="card-title"><?= $can['name'] ?></span>
@@ -46,4 +52,4 @@ foreach ($data as $can) : ?>
         </div>
     </div>
 <?php endforeach;
-echo "</div>";
+echo "</div>"; ?>

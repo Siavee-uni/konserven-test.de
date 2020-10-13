@@ -1,3 +1,6 @@
+<?php session_start();
+$_SESSION["login"] = $_SESSION["login"];
+?>
 <!-- include files -->
 <style>
 	<?php
@@ -7,9 +10,8 @@
 </style>
 
 <?php
-readfile('html/header.html');
-require_once 'html/info_box.php';
-require_once 'html/list.php';
-readfile('html/footer.html');
-$uri =  __DIR__;
+require('components/header.php');
+readfile('components/info_box.html');
+require('components/list.php');
+readfile('components/footer.html');
 ?>

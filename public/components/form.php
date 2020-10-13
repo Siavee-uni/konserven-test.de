@@ -1,5 +1,9 @@
+<?php
+if (session_status() == PHP_SESSION_NONE) {
+  session_start();
+}
+?>
 <!DOCTYPE html>
-<html lang="en">
 
 <head>
   <!--===============================================================================================-->
@@ -9,12 +13,10 @@
 
 <body>
   <?php
-  $errorMsg = "";
-  $validUser = "";
-  $form = '
+  $postForm = '
 <div class="container-contact100">
   <div class="wrap-contact100">
-    <form class="contact100-form validate-form" action="/api/api.php" method="POST" enctype="multipart/form-data">
+    <form class="contact100-form validate-form" action="../api/post.php" method="POST" enctype="multipart/form-data">
       <div class="wrap-input100 validate-input" data-validate="Name is required">
         <span class="label-input100">Name</span>
         <input type="text" id="name" name="name" value="">
@@ -91,31 +93,14 @@
   </div>
 </div>';
 
-  $form2 = '
-  <div class="login-page">
-    <div class="form">
-      <form class="login-form" name="input" action="" method="post">
-        <input type="text" value="" id="username" name="username" placeholder="username"/>
-        <input type="password" value="" id="password" name="password" placeholder="password"/>
-        <button type="submit" name="submit" >login</button>
-        <div class="error">' . $errorMsg . '</div>
-      </form>
-    </div>
-  </div>';
-
-  if (isset($_POST["submit"])) {
-    $validUser = $_POST["username"] == "test" && $_POST["password"] == "123";
-    if (!$validUser) {
-      echo $errorMsg = "Invalid username or password.";
-    } else {
-      echo $form;
-    }
-  }
-
-  if (empty($validUser) || !empty($errorMsg)) {
-    echo $form2;
+  // echo postform
+  if ($_SESSION["login"]) {
+    echo $postForm;
+  } else {
+    header("Location: http://localhost/konserven-test.de/public/"); // $_SERVER['HTTP_HOST']
   }
   ?>
+
 </body>
 
 </html>

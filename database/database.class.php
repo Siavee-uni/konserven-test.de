@@ -8,6 +8,14 @@ class Database
   private $password = '';
   protected $conn;
 
+  // Table Properties
+  public $name;
+  public $bio;
+  public $vegan;
+  public $description;
+  public $filling;
+  public $score;
+
   // DB Connect
   public function __construct()
   {
@@ -21,24 +29,53 @@ class Database
     }
   }
 
-  function insert($data)
+  function create(array $data)
   {
     $columns = implode(", ", array_keys($data));
     $values  = "'" . implode("', '", $data) . "'";
     $sql = "INSERT INTO `konserven`($columns) VALUES ($values)";
 
-    $this->conn->exec($sql);
+    $sth = $this->conn->prepare($sql);
+    $sth->execute();
     return "New record created successfully";
   }
 
-  function get(string $columns, string $table)
+  function read(string $columns, string $table)
   {
 
-    $sql = "SELECT $columns FROM $table";
+    $sql = "SELECT $columns FROM $table ORDER BY
+    score DESC";
     $sth = $this->conn->prepare($sql);
     $sth->execute();
 
     $result = $sth->fetchAll(\PDO::FETCH_ASSOC);
     return $result;
+  }
+
+  function update(array $columns, string $table)
+  {
+
+    $query = 'UPDATE' . $table . '
+    SET name = :name, bio = :bio, 
+    vega = :vegan, description = :description, 
+    filling = :filling, score = :score
+    WHERE
+    id = :id';
+
+    // Prepare Statement
+    $stmt = $this->conn->prepare($query);
+
+    // Bind data
+    $stmt->bindParam(':name', $this->name);
+    $stmt->bindParam(':id', $this->bio);
+    $stmt->bindParam(':name', $this->vegan);
+    $stmt->bindParam(':id', $this->description);
+    $stmt->bindParam(':name', $this->filling);
+    $stmt->bindParam(':id', $this->score);
+
+    // Execute query
+    if ($stmt->execute()) {
+      return true;
+    }
   }
 }
