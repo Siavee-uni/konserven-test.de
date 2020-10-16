@@ -66,33 +66,6 @@ div.grid-img img {
     padding-bottom: 5px;
 }
 
-/* over */
-.container .card {
-    position: relative;
-    cursor: pointer;
-    box-shadow: none;
-}
-
-.container .card .face {
-    transition: 0.5s;
-}
-
-.container .card .face.face1 {
-    position: relative;
-    z-index: 1;
-    transform: translateY(100px);
-}
-
-.container .card:hover .face.face1 {
-    transform: translateY(0);
-}
-
-.container .card .face.face2 {
-    position: relative;
-    padding-top: 10px;
-    transform: translateY(-10px);
-}
-
 /* info box */
 
 section.infobox {
@@ -105,4 +78,47 @@ section.infobox {
 }
 section.infobox p {
     padding: 0 10px 0 10px;
+}
+
+/* modal */
+
+.modal-header {
+    background: white;
+    border-radius: 10px;
+    height: 20px;
+    position: relative;
+    width: 20px;
+    float: right;
+}
+.line1 {
+    background: black;
+    height: 12px;
+    position: absolute;
+    transform: translateX(9px) translateY(4px) rotate(45deg);
+    width: 2px;
+}
+.line2 {
+    background: black;
+    height: 12px;
+    position: absolute;
+    transform: translateX(9px) translateY(4px) rotate(-45deg);
+    width: 2px;
+}
+
+.modal-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    grid-gap: 20px;
+}
+.modal-content img {
+    max-width: 400px;
+}
+.modal-content h1 {
+    font-size: 20px;
+}
+
+@media only screen and (max-width: 700px) {
+    .modal-content {
+        display: block;
+    }
 }

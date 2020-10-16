@@ -1,6 +1,8 @@
+<?php session_start(); ?>
+
 <link rel="stylesheet" type="text/css" href="css/input_form.css">
+
 <?php
-session_start();
 $errorMsg = "";
 $_SESSION["login"] = $_SESSION["login"];
 

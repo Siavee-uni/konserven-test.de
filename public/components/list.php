@@ -4,7 +4,7 @@ include_once $url . '/database/database.class.php';
 include_once $url . '/database/migration.class.php';
 
 // get data
-$columns = "`name`,`bio`,`score`,`image`,`vegan`,`filling`,`description`,`created`";
+$columns = "`id`,`name`,`bio`,`score`,`image`,`vegan`,`filling`,`description`,`created`";
 $table = "`konserven`";
 
 $connection = new Database;
@@ -18,6 +18,25 @@ foreach ($data as $can) : ?>
     $imgPath = "uploads/" . $can['image'];
     $bioImgPath = "img/bio.png";
     ?>
+    <div id="modal<?= $can['id'] ?>" class="modal">
+        <div class="modal-header modal-close">
+            <div class="line1"></div>
+            <div class="line2"></div>
+        </div>
+        <article class="modal-content">
+            <div>
+                <img src="<?= $imgPath ?>" alt="konserve">
+                <h1><?= $can['name'] ?></h1>
+            </div>
+            <div>
+                <div>
+                    <p>Geschmack: <?= $can['score'] ?>/10 </p>
+                    <p>Sättigungsgrad: <?= $can['filling'] ?>/10</p>
+                </div>
+                <p>Zutaten: <?= $can['description'] ?></p>
+            </div>
+        </article>
+    </div>
 
     <div class="can">
         <div class="col s12">
@@ -29,10 +48,12 @@ foreach ($data as $can) : ?>
                             <button>delete</button>
                         </div>
                     <?php endif ?>
-                    <div class="card-image face">
-                        <img src="<?= $imgPath ?>" alt="konserve">
-                        <span class="card-title"><?= $can['name'] ?></span>
-                    </div>
+                    <a class="modal-trigger" href="#modal<?= $can['id'] ?>">
+                        <div class="card-image face">
+                            <img src="<?= $imgPath ?>" alt="konserve">
+                            <span class="card-title"><?= $can['name'] ?></span>
+                        </div>
+                    </a>
                     <div class="card-content">
                         <div class="symbols">
                             <?= !$can['bio'] ? '' : '<img src="img/bio.png" alt="konserve">' ?>
@@ -41,11 +62,6 @@ foreach ($data as $can) : ?>
                         <p>Geschmack: <?= $can['score'] ?>/10 </p>
                         <p>Sättigungsgrad: <?= $can['filling'] ?>/10</p>
                         <p><?= $can['created'] ?> </p>
-                    </div>
-                </div>
-                <div class="face face2">
-                    <div class="card-content2 face">
-                        <p>Zutaten: <?= $can['description'] ?></p>
                     </div>
                 </div>
             </div>
