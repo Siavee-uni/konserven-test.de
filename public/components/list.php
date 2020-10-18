@@ -44,8 +44,13 @@ foreach ($data as $can) : ?>
                 <div class="face face1">
                     <?php if ($_SESSION["login"]) : ?>
                         <div>
-                            <button>edit</button>
-                            <button>delete</button>
+                            <form action="components/edit_form.php" method="post">
+                                <input name="id" type="hidden" value="<?= $can['id'] ?>">
+                                <button type="submit">edit</button>
+                            </form>
+                            <form action="" method="post">
+                                <button type="submit">delete</button>
+                            </form>
                         </div>
                     <?php endif ?>
                     <a class="modal-trigger" href="#modal<?= $can['id'] ?>">

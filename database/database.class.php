@@ -52,12 +52,25 @@ class Database
     return $result;
   }
 
-  function update(array $columns, string $table)
+  function readSingle(string $columns, string $table, $id)
+  {
+
+    $sql = "SELECT $columns FROM $table WHERE 
+    id = $id";
+    $sth = $this->conn->prepare($sql);
+    $sth->execute();
+
+    $result = $sth->fetchObject();
+    return $result;
+  }
+
+
+  function update(string $table)
   {
 
     $query = 'UPDATE' . $table . '
     SET name = :name, bio = :bio, 
-    vega = :vegan, description = :description, 
+    vegan = :vegan, description = :description, 
     filling = :filling, score = :score
     WHERE
     id = :id';
@@ -67,11 +80,12 @@ class Database
 
     // Bind data
     $stmt->bindParam(':name', $this->name);
-    $stmt->bindParam(':id', $this->bio);
-    $stmt->bindParam(':name', $this->vegan);
-    $stmt->bindParam(':id', $this->description);
-    $stmt->bindParam(':name', $this->filling);
-    $stmt->bindParam(':id', $this->score);
+    $stmt->bindParam(':bio', $this->bio);
+    $stmt->bindParam(':vegan', $this->vegan);
+    $stmt->bindParam(':description', $this->description);
+    $stmt->bindParam(':filling', $this->filling);
+    $stmt->bindParam(':score', $this->score);
+    $stmt->bindParam(':id', $this->id);
 
     // Execute query
     if ($stmt->execute()) {
