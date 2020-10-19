@@ -30,13 +30,15 @@ if (session_status() == PHP_SESSION_NONE) {
     } else {
       $bioChecked = "";
     }
+
     if ($postObject->vegan == 1) {
       $veganChecked = "checked";
     } else {
       $veganChecked = "";
     }
+
     $imgPath = "../uploads/" . $postObject->image;
-    echo "<pre>" . print_r($postObject, true) . "</pre>";
+    
     echo '
     <div class="container-contact100">
       <div class="wrap-contact100">

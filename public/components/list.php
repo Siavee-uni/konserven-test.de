@@ -6,10 +6,10 @@ include_once $url . '/database/migration.class.php';
 // get data
 $columns = "`id`,`name`,`bio`,`score`,`image`,`vegan`,`filling`,`description`,`created`";
 $table = "`konserven`";
-
+/*  new Migration;  */
 $connection = new Database;
-/* new Migration; */
 $data = $connection->read($columns, $table);
+
 // loop
 echo '<div class="container grid-img">';
 
@@ -40,19 +40,20 @@ foreach ($data as $can) : ?>
 
     <div class="can">
         <div class="col s12">
-            <div class="card">
-                <div class="face face1">
-                    <?php if ($_SESSION["login"]) : ?>
+        <?php if ($_SESSION["login"]) : ?>
                         <div>
                             <form action="components/edit_form.php" method="post">
                                 <input name="id" type="hidden" value="<?= $can['id'] ?>">
                                 <button type="submit">edit</button>
                             </form>
-                            <form action="" method="post">
+                            <form action="api/delete.php" method="post">
                                 <button type="submit">delete</button>
+                                <input name="id" type="hidden" value="<?= $can['id'] ?>">
                             </form>
                         </div>
                     <?php endif ?>
+            <div class="card">
+                <div class="face face1">
                     <a class="modal-trigger" href="#modal<?= $can['id'] ?>">
                         <div class="card-image face">
                             <img src="<?= $imgPath ?>" alt="konserve">

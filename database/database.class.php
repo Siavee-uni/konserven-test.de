@@ -9,6 +9,7 @@ class Database
   protected $conn;
 
   // Table Properties
+  public $id;
   public $name;
   public $bio;
   public $vegan;
@@ -35,9 +36,10 @@ class Database
     $values  = "'" . implode("', '", $data) . "'";
     $sql = "INSERT INTO `konserven`($columns) VALUES ($values)";
 
-    $sth = $this->conn->prepare($sql);
-    $sth->execute();
-    return "New record created successfully";
+    $stmt = $this->conn->prepare($sql);
+    if ($stmt->execute()) {
+      return true;
+    }
   }
 
   function read(string $columns, string $table)
@@ -45,30 +47,29 @@ class Database
 
     $sql = "SELECT $columns FROM $table ORDER BY
     score DESC";
-    $sth = $this->conn->prepare($sql);
-    $sth->execute();
+    $stmt = $this->conn->prepare($sql);
+    $stmt->execute();
 
-    $result = $sth->fetchAll(\PDO::FETCH_ASSOC);
+    $result = $stmt->fetchAll(\PDO::FETCH_ASSOC);
     return $result;
   }
 
   function readSingle(string $columns, string $table, $id)
   {
 
-    $sql = "SELECT $columns FROM $table WHERE 
-    id = $id";
-    $sth = $this->conn->prepare($sql);
-    $sth->execute();
+    $sql = "SELECT $columns FROM $table WHERE id = $id";
+    $stmt = $this->conn->prepare($sql);
+    $stmt->execute();
 
-    $result = $sth->fetchObject();
+    $result = $stmt->fetchObject();
     return $result;
   }
 
 
-  function update(string $table)
+  function update()
   {
 
-    $query = 'UPDATE' . $table . '
+    $query = 'UPDATE konserven
     SET name = :name, bio = :bio, 
     vegan = :vegan, description = :description, 
     filling = :filling, score = :score
@@ -88,6 +89,17 @@ class Database
     $stmt->bindParam(':id', $this->id);
 
     // Execute query
+    if ($stmt->execute()) {
+      return true;
+    }
+  }
+
+  function delete()
+  {
+
+    $query = "DELETE FROM `konserven` WHERE `id` = $this->id" ;
+    $stmt = $this->conn->prepare($query);
+    
     if ($stmt->execute()) {
       return true;
     }
