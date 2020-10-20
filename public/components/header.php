@@ -1,7 +1,7 @@
 <header>
   <nav class="navigation_1">
     <div class="container nav-wrapper">
-      <img class="logo" src="img/konserven-test-logo.png" alt="konserven-test-logo">
+    <a href="konserven-tests.de"><img class="logo" src="img/konserven-test-logo.png" alt="konserven-test-logo"></a>
       <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
       <ul class="right hide-on-med-and-down">
         <li><a href="#">Über Uns</a></li>
