@@ -1,20 +1,12 @@
-<html>
-<title>konserven-test</title>
-<meta name="viewport" content="width=device-width, initial-scale=1" />
-<link rel="stylesheet" href="materialize.min.css">
-<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-<link rel="stylesheet" href="/css/main.css">
-
 <header>
-  <nav>
+  <nav class="navigation_1">
     <div class="container nav-wrapper">
       <img class="logo" src="img/konserven-test-logo.png" alt="konserven-test-logo">
       <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
       <ul class="right hide-on-med-and-down">
         <li><a href="#">Über Uns</a></li>
-        <?php if (!$_SESSION["login"]) : ?>
-          <li><a href="login.php">Login</a></li>
-        <?php else : ?>
+        <li><a href="#">Kontakt</a></li>
+        <?php if ($_SESSION["login"]) : ?>
           <li><a href="components/form.php">New Post</a></li>
         <?php endif ?>
       </ul>
@@ -35,5 +27,3 @@
     <li><a href="#">Kontakt</a></li>
   </ul>
 </header>
-
-<body>
