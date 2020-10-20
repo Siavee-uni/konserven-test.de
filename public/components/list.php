@@ -61,13 +61,15 @@ foreach ($data as $can) : ?>
                         </div>
                     </a>
                     <div class="card-content">
-                        <div class="symbols">
-                            <?= !$can['bio'] ? '' : '<img src="img/bio.png" alt="konserve">' ?>
-                            <?= !$can['vegan'] ? '' : '<img src="img/vegan.png" alt="konserve">' ?>
-                        </div>
                         <p>Geschmack: <?= $can['score'] ?>/10 </p>
                         <p>Sättigungsgrad: <?= $can['filling'] ?>/10</p>
-                        <p><?= $can['created'] ?> </p>
+                        <div class="card-footer">
+                            <p><?= $can['created'] ?> </p>
+                            <div class="symbols">
+                                <?= !$can['bio'] ? '' : '<img src="img/bio.png" alt="konserve">' ?>
+                                <?= !$can['vegan'] ? '' : '<img src="img/vegan.png" alt="konserve">' ?>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>

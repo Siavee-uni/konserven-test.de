@@ -9,6 +9,7 @@ class Migration extends Database
         $createTableCon = "CREATE TABLE IF NOT EXISTS `konserven` (
         `id` int(11) NOT NULL AUTO_INCREMENT,
         `name` varchar(256) NOT NULL,
+        `brand` varchar(256) NOT NULL,
         `description` text NOT NULL,
         `bio` BOOLEAN  DEFAULT false,
         `vegan` BOOLEAN  DEFAULT false,
@@ -30,9 +31,9 @@ class Migration extends Database
         PRIMARY KEY (`id`)
         ) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=19"; */
 
-                $connection = new Database;
+        $connection = new Database;
 
-                $connection->conn->exec($createTableCon);
+        $connection->conn->exec($createTableCon);
                 
         }
 }
