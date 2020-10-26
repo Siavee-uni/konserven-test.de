@@ -3,7 +3,7 @@ include_once 'database.class.php';
 class Migration extends Database
 {
 
-        public function __construct()
+        public function migrate()
         {
 
         $createTableCon = "CREATE TABLE IF NOT EXISTS `konserven` (
@@ -22,18 +22,16 @@ class Migration extends Database
         PRIMARY KEY (`id`)
         ) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=19";
 
-             /*    $createTableUser = "CREATE TABLE IF NOT EXISTS `User` (
-        `id` int(11) NOT NULL AUTO_INCREMENT,
-        `name` varchar(256) NOT NULL,
-        `passwort` varchar(256) NOT NULL,
-        `created` datetime NOT NULL,
-        `modified` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
-        PRIMARY KEY (`id`)
-        ) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=19"; */
-
-        $connection = new Database;
-
-        $connection->conn->exec($createTableCon);
+        $this->conn->exec($createTableCon);
                 
+        }
+        public function addColumn() {
+
+        $createTableCon = "
+        ALTER TABLE `konserven`
+        ADD `brand` varchar(256) NOT NULL";
+        
+        $this->conn->exec($createTableCon);
+                                
         }
 }

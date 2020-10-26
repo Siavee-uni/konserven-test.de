@@ -22,14 +22,26 @@ if ($_SESSION["login"] && ($_SERVER['REQUEST_METHOD'] == 'POST')) {
     $data = [
         'name' => $_POST["name"],
         'bio' => $_POST["bio"],
+        'brand' => $_POST["brand"],
         'vegan' => $_POST["vegan"],
         'description' => $_POST["description"],
         'filling' => $_POST["filling"],
         'score' => $_POST["score"],
-        'image' => basename($_FILES["image"]["name"])
+        'image' => basename($_FILES["image"]["name"]),
+        'url' => $_POST["name"] . "-" . $_POST["brand"]
     ];
-
     $connection = new Database;
+
+   /*  $connection->name = $_POST["name"];
+    $connection->bio = $_POST["bio"];
+    $connection->vegan = $_POST["vegan"];
+    $connection->description = $_POST["description"];
+    $connection->filling = $_POST["filling"];
+    $connection->score = $_POST["score"];
+    $connection->id = $_POST["id"];
+    $connection->brand = $_POST["brand"];
+    $connection->image = basename($_FILES["image"]["name"]); */
+
     
     if ($connection->create($data)) {
         move_uploaded_file($_FILES["image"]["tmp_name"], $target_file);

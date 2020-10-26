@@ -23,6 +23,12 @@ if (session_status() == PHP_SESSION_NONE) {
         <span class="focus-input100"></span>
       </div>
 
+      <div class="wrap-input100 validate-input" data-validate="">
+        <span class="label-input100">Firma</span>
+        <input type="text" id="brand" name="brand" value="">
+        <span class="focus-input100"></span>
+      </div>
+
       <div class="wrap-input100 validate-input">
         <span class="label-input100">Bio</span>
         <input type="checkbox" id="bio" name="bio" value="1">

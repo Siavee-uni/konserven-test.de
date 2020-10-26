@@ -23,6 +23,7 @@ if ($_SESSION["login"] && ($_SERVER['REQUEST_METHOD'] == 'POST')) {
     $connection->filling = $_POST["filling"];
     $connection->score = $_POST["score"];
     $connection->id = $_POST["id"];
+    $connection->brand = $_POST["brand"];
 
     if ($connection->update()) {
         /* move_uploaded_file($_FILES["image"]["tmp_name"], $target_file); */

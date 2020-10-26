@@ -11,11 +11,14 @@ class Database
   // Table Properties
   public $id;
   public $name;
+  public $brand;
   public $bio;
   public $vegan;
   public $description;
   public $filling;
   public $score;
+  public $image;
+  public $url;
 
   // DB Connect
   public function __construct()
@@ -54,11 +57,23 @@ class Database
     return $result;
   }
 
-  function readSingle(string $columns, string $table, $id)
+  function readAll()
   {
-
-    $sql = "SELECT $columns FROM $table WHERE id = $id";
+    $sql = "SELECT * FROM konserven";
     $stmt = $this->conn->prepare($sql);
+    $stmt->execute();
+
+    $result = $stmt->fetchAll(\PDO::FETCH_ASSOC);
+    return $result;
+  }
+
+  function readSingle()
+  {
+    $sql = 'SELECT * FROM `konserven` WHERE url = :url';
+    $stmt = $this->conn->prepare($sql);
+
+    $stmt->bindParam(':url', $this->url);
+    
     $stmt->execute();
 
     $result = $stmt->fetchObject();
@@ -69,18 +84,19 @@ class Database
   function update()
   {
 
-    $query = 'UPDATE konserven
-    SET name = :name, bio = :bio, 
+    $query = "UPDATE konserven
+    SET name = :name, brand = :brand, bio = :bio, 
     vegan = :vegan, description = :description, 
     filling = :filling, score = :score
     WHERE
-    id = :id';
+    id = :id";
 
     // Prepare Statement
     $stmt = $this->conn->prepare($query);
 
     // Bind data
     $stmt->bindParam(':name', $this->name);
+    $stmt->bindParam(':brand', $this->brand);
     $stmt->bindParam(':bio', $this->bio);
     $stmt->bindParam(':vegan', $this->vegan);
     $stmt->bindParam(':description', $this->description);

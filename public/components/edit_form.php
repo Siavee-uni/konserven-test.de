@@ -19,7 +19,7 @@ if (session_status() == PHP_SESSION_NONE) {
     include_once $url . '/database/database.class.php';
 
     $id = $_POST["id"];
-    $columns = "`id`,`name`,`bio`,`score`,`image`,`vegan`,`filling`,`description`";
+    $columns = "`id`,`name`,`bio`,`score`,`image`,`vegan`,`filling`,`description`,`brand`";
     $table = "`konserven`";
 
     $connection = new Database;
@@ -46,6 +46,12 @@ if (session_status() == PHP_SESSION_NONE) {
           <div class="wrap-input100 validate-input" data-validate="Name is required">
             <span class="label-input100">Name</span>
             <input type="text" id="name" name="name" value="' . $postObject->name . '">
+            <span class="focus-input100"></span>
+          </div>
+
+          <div class="wrap-input100 validate-input" data-validate="Name is required">
+            <span class="label-input100">Firma</span>
+            <input type="text" id="brand" name="brand" value="' . $postObject->brand . '">
             <span class="focus-input100"></span>
           </div>
     

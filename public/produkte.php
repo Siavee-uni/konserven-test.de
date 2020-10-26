@@ -18,13 +18,9 @@ if (isset($_SESSION['login'])) {
 include_once '../database/database.class.php';
 require('components/header.php');
 
-
-$id = $_GET["id"];
-$columns = "`id`,`name`,`bio`,`score`,`image`,`vegan`,`filling`,`description`";
-$table = "`konserven`";
-
 $connection = new Database;
-$postObject = $connection->readSingle($columns, $table, $id);
+$connection->url = $_GET["url"];
+$postObject = $connection->readSingle();
 
 $imgPath = "uploads/" . $postObject->image;
 ?>
@@ -39,13 +35,28 @@ $imgPath = "uploads/" . $postObject->image;
         <img src="<?= $imgPath ?>" alt="konserve">
         <div class="single_content">
             <div class="single_content_rating">
-                <h1 class="card-title"><?= $postObject->name ?></h1>
+                <h2><?= $postObject->brand ?></h2>
+                <h1><?= $postObject->name ?></h1>
                 <div>
                     <?= !$postObject->bio ? '' : '<p class="bio">Bio<span>&#10003;</span></p>' ?>
                     <?= !$postObject->vegan ? '' : '<p class="vegan">Vegan<span>&#10003;</span></p>' ?>
                   </div>
-                <p>Geschmack: <?= $postObject->score ?>/10 </p>
-                <p>Sättigungsgrad: <?= $postObject->filling ?>/10</p>
+                <div class="taste_rating">
+                    <p>Geschmack:</p>
+                    <div>
+                        <strong><span><?= $postObject->score ?></span></strong>
+                        <span class="small">/</span>
+                        <span class="small">10</span>  
+                    </div>                  
+                </div>
+                <div class="taste_rating">
+                    <p>Sättigungsgrad:</p>
+                    <div>
+                        <strong><span><?= $postObject->filling ?></span></strong>
+                        <span class="small">/</span>
+                        <span class="small">10</span>  
+                    </div>                  
+                </div>
             </div>
             <div class="single_content_infos">
                 <p>Zutaten: <?= $postObject->description ?></p>
