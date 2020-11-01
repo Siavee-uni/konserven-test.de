@@ -1,14 +1,10 @@
 <?php
-include_once dirname(__DIR__, 1) . '/env.php';
+include_once dirname(__DIR__, 1) . '/config/database.php';
 
-class Database
+class Product
 {
-    // DB Params
-    private $host;
-    private $db_name;
-    private $username;
-    private $password;
-    protected $conn;
+    // DB
+    private $conn;
 
     // Table Properties
     public $id;
@@ -21,25 +17,12 @@ class Database
     public $score;
     public $image;
     public $url;
-
     public $column;
     public $value;
 
-    // DB Connect
-    public function __construct()
-    {
-        $this->conn = null;
-        $this->host = getenv("DB_HOST");
-        $this->username = getenv("DB_USERNAME");
-        $this->password = getenv("DB_PASSWORD");
-        $this->db_name = getenv("DB_NAME");
-
-        try {
-            $this->conn = new PDO('mysql:host=' . $this->host . ';dbname=' . $this->db_name, $this->username, $this->password);
-            $this->conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-        } catch (PDOException $e) {
-            echo 'Connection Error: ' . $e->getMessage();
-        }
+    // Constructor with DB
+    public function __construct($db) {
+        $this->conn = $db;
     }
 
     function create(array $data)
@@ -63,23 +46,26 @@ class Database
         return $stmt->fetchAll();
     }
 
-    function readSingle($key)
+    function readSingleID()
     {
-        if ($key == "id") {
-            $sql = 'SELECT * FROM `konserven` WHERE id = :id';
-            $stmt = $this->conn->prepare($sql);
+        $sql = 'SELECT * FROM `konserven` WHERE id = :id';
+        $stmt = $this->conn->prepare($sql);
 
-            $this->id = htmlspecialchars(strip_tags($this->id));
+        $this->id = htmlspecialchars(strip_tags($this->id));
 
-            $stmt->bindParam(':id', $this->id);
-        } else {
-            $sql = 'SELECT * FROM `konserven` WHERE url = :url';
-            $stmt = $this->conn->prepare($sql);
+        $stmt->bindParam(':id', $this->id);
 
-            $this->url = htmlspecialchars(strip_tags($this->url));
+        $stmt->execute();
+        return $stmt->fetchObject();
+    }
+    function readSingleUrl()
+    {
+        $sql = 'SELECT * FROM `konserven` WHERE url = :url';
+        $stmt = $this->conn->prepare($sql);
 
-            $stmt->bindParam(':url', $this->url);
-        }
+        $this->url = htmlspecialchars(strip_tags($this->url));
+
+        $stmt->bindParam(':url', $this->url);
 
         $stmt->execute();
         return $stmt->fetchObject();

@@ -1,15 +1,12 @@
 <?php
 include_once dirname(__DIR__, 1) . '/env.php';
-session_start();
+include_once 'components/session.php';
 ?>
 
     <link rel="stylesheet" type="text/css" href="/css/input_form.css">
 
 <?php
 $errorMsg = "";
-if (!isset($_SESSION['login'])) {
-    $_SESSION["login"] = false;
-}
 
 if (isset($_POST["submit"])) {
     $validUser = $_POST["username"] == getenv("USER_NAME") && $_POST["password"] == getenv("USER_PW");

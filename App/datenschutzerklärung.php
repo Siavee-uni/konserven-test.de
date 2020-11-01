@@ -1,12 +1,6 @@
 <?php
-if (session_status() == PHP_SESSION_NONE) {
-	session_start();
-}
-if (!isset($_SESSION['login'])) {
-	$_SESSION["login"] = false;
-}
+include_once 'components/session.php';
 ?>
-
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 <link rel="stylesheet" href="css/materialize/css/materialize.min.css">
@@ -14,6 +8,6 @@ if (!isset($_SESSION['login'])) {
 
 <?php
 require_once('components/header.php');
-readfile('components/impressum.html');
+readfile('components/datenschutzerklärung.html');
 readfile('components/footer.html');
 ?>

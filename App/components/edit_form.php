@@ -15,6 +15,7 @@ if (session_status() == PHP_SESSION_NONE) {
 <body>
 <?php
 // echo postform
+$server = "http://$_SERVER[HTTP_HOST]";
 if ($_SESSION["login"]) {
     $url = dirname(__DIR__, 2);
     include_once $url . '/database/database.class.php';
@@ -127,7 +128,7 @@ if ($_SESSION["login"]) {
       </div>
     </div>';
 } else {
-    header("Location: http://localhost/konserven-test.de/public/"); // $_SERVER['HTTP_HOST']
+    header("Location:" . $server); // $_SERVER['HTTP_HOST']
 }
 ?>
 

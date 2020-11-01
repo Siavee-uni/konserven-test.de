@@ -1,18 +1,9 @@
 <?php
-$url = dirname(__DIR__, 2);
-include_once $url . '/database/database.class.php';
-include_once $url . '/database/migration.class.php';
 
-/* $migrate = new Migration; 
-$migrate->addColumn(); */
-$connection = new Database;
+include_once dirname(__DIR__, 1). '/controllers/ProductController.php';
 
-if (isset($_GET["search"])) {
-    $column = $_GET["search"];
-    $data = $connection->search($column);
-} else {
-    $data = $connection->readAll();
-}
+$controller = new ProductController;
+$data = $controller->filterList();
 
 // loop
 echo '<div class="container grid-img">';

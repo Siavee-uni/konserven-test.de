@@ -7,18 +7,12 @@
 <link rel="stylesheet" href="/css/single_product.css">
 <body>
 <?php
-if (session_status() == PHP_SESSION_NONE) {
-    session_start();
-}
-if (!isset($_SESSION['login'])) {
-    $_SESSION["login"] = false;
-}
-include_once '../database/database.class.php';
-require('components/header.php');
+include_once 'controllers/ProductController.php';
+include_once 'components/session.php';
+include_once 'components/header.php';
 
-$connection = new Database;
-$connection->url = $_GET["url"];
-$postObject = $connection->readSingle("url");
+$controller = new ProductController;
+$postObject = $controller->readSingle("url");
 
 $imgPath = "/uploads/" . $postObject->image;
 ?>
