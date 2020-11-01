@@ -1,19 +1,24 @@
-<?php session_start(); ?>
+<?php
+include_once dirname(__DIR__, 1) . '/env.php';
+session_start();
+?>
 
-<link rel="stylesheet" type="text/css" href="css/input_form.css">
+    <link rel="stylesheet" type="text/css" href="/css/input_form.css">
 
 <?php
 $errorMsg = "";
-$_SESSION["login"] = $_SESSION["login"];
+if (!isset($_SESSION['login'])) {
+    $_SESSION["login"] = false;
+}
 
 if (isset($_POST["submit"])) {
-  $validUser = $_POST["username"] == "test" && $_POST["password"] == "123";
-  if (!$validUser) {
-    echo $errorMsg = "Invalid username or password.";
-  } else {
-    $_SESSION["login"] = true;
-    header("Location: http://localhost/konserven-test.de/public/");
-  }
+    $validUser = $_POST["username"] == getenv("USER_NAME") && $_POST["password"] == getenv("USER_PW");
+    if (!$validUser) {
+        $errorMsg = "Invalid username or password.";
+    } else {
+        $_SESSION["login"] = true;
+        header("Location: https://www.konserven-tests.de/");
+    }
 }
 $loginForm = '
   <div class="login-page">
@@ -28,5 +33,5 @@ $loginForm = '
   </div>';
 
 if (empty($validUser) || !empty($errorMsg)) {
-  echo $loginForm;
+    echo $loginForm;
 }

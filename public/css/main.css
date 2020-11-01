@@ -29,9 +29,28 @@ div.grid-img {
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     grid-gap: 10px;
     max-width: 100%;
+    justify-items: center;
 }
 div.grid-img img {
     max-width: 100%;
+}
+.card .card-image img {
+     display: block;
+     border-radius: 2px 2px 0 0;
+     position: relative;
+     left: 0;
+     right: 0;
+     top: 0;
+     bottom: 0;
+     width: unset;
+    max-height: 200px;
+    margin-left: auto;
+    margin-right: auto;
+}
+@media only screen and (max-width: 472px) {
+    .card .card-image img {
+        max-height: 300px;
+    }
 }
 /* cards */
 .card {
@@ -56,7 +75,6 @@ div.grid-img img {
     height: 10px;
     width: 90%;
     opacity: 0;
-    background: -webkit-radial-gradient(center, ellipse, rgba(0, 0, 0, 0.35) 0%, rgba(0, 0, 0, 0) 80%);
     background: radial-gradient(ellipse at center, rgba(0, 0, 0, 0.35) 0%, rgba(0, 0, 0, 0) 80%);
     /* W3C */
     -webkit-transition-duration: 0.3s;
@@ -80,13 +98,7 @@ div.grid-img img {
     background-color: rgb(74, 122, 91, 0.8);
     font-size: 20px;
 }
-.card .card-image{
-    height: 250px;
-}
-.card .card-image img{
-    max-height: 100%;
-    height: -webkit-fill-available;
-}
+
 
 .card .card-content {
     padding: 5px 5px 5px 10px;
@@ -105,6 +117,7 @@ div.grid-img img {
 .card-content .card-footer  {
     display: grid;
     grid-template-columns: 1fr 70px;
+    height: 35px;
 }
 .card-content .card-footer .symbols {
     padding-top: 5px;
@@ -164,9 +177,7 @@ section.infobox p {
     grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
     grid-gap: 20px;
 }
-.modal-content img {
-    max-width: 400px;
-}
+
 .modal-content h1 {
     font-size: 20px;
 }

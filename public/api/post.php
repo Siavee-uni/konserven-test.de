@@ -2,7 +2,7 @@
 if (session_status() == PHP_SESSION_NONE) {
     session_start();
   }
-
+$server = "http://$_SERVER[HTTP_HOST]";
 if ($_SESSION["login"] && ($_SERVER['REQUEST_METHOD'] == 'POST')) {
     
     $url = dirname(__DIR__, 2);
@@ -41,18 +41,17 @@ if ($_SESSION["login"] && ($_SERVER['REQUEST_METHOD'] == 'POST')) {
     $connection->id = $_POST["id"];
     $connection->brand = $_POST["brand"];
     $connection->image = basename($_FILES["image"]["name"]); */
-
     
     if ($connection->create($data)) {
         move_uploaded_file($_FILES["image"]["tmp_name"], $target_file);
-        header("Location: http://localhost/konserven-test.de/public/");
+        header("Location:" . $server);
     } else {
         echo "something went wrong";
-        header("refresh:5; http://localhost/konserven-test.de/public/");
+        header("refresh:5; " . $server);
     }
 
 }   else {
 
     echo "You are not logged in";
-    header("refresh:5; http://localhost/konserven-test.de/public/");
+    header("refresh:5; " . $server );
 }

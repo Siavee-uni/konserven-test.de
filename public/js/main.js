@@ -14,4 +14,22 @@
 
 }; */
 
+/* window.onload = function () {
+    const veganButton = document.querySelector("#vegan");
+
+    veganButton.addEventListener("click", function(){
+
+        const card = document.querySelectorAll(".can .card");
+
+        card.forEach( function(card) {
+            var vegan = card.getAttribute('data-vegan');
+            if (!vegan) {
+                card.remove();
+            }
+        });
+        
+    });
+    
+} */
+
 

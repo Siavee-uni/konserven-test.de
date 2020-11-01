@@ -1,44 +1,44 @@
 <?php
 if (session_status() == PHP_SESSION_NONE) {
-  session_start();
+    session_start();
 }
 ?>
 <!DOCTYPE html>
 
 <head>
-  <!--===============================================================================================-->
-  <link rel="stylesheet" type="text/css" href="../css/input_form.css">
-  <!--===============================================================================================-->
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="../css/input_form.css">
+    <title>edit-form</title>
+    <!--===============================================================================================-->
 </head>
 
 <body>
-  <?php
-  // echo postform
-  if ($_SESSION["login"]) {
+<?php
+// echo postform
+if ($_SESSION["login"]) {
     $url = dirname(__DIR__, 2);
     include_once $url . '/database/database.class.php';
 
     $id = $_POST["id"];
-    $columns = "`id`,`name`,`bio`,`score`,`image`,`vegan`,`filling`,`description`,`brand`";
-    $table = "`konserven`";
 
     $connection = new Database;
-    $postObject = $connection->readSingle($columns, $table, $id);
+    $connection->id = $id;
+    $postObject = $connection->readSingle("id");
 
     if ($postObject->bio == 1) {
-      $bioChecked = "checked";
+        $bioChecked = "checked";
     } else {
-      $bioChecked = "";
+        $bioChecked = "";
     }
 
     if ($postObject->vegan == 1) {
-      $veganChecked = "checked";
+        $veganChecked = "checked";
     } else {
-      $veganChecked = "";
+        $veganChecked = "";
     }
 
     $imgPath = "../uploads/" . $postObject->image;
-    
+
     echo '
     <div class="container-contact100">
       <div class="wrap-contact100">
@@ -84,7 +84,7 @@ if (session_status() == PHP_SESSION_NONE) {
             
             <span class="label-input100">Filling?</span>
             <div>
-              <select class="selection-2" name="filling" value="' . $postObject->filling . '">
+              <select class="selection-2" name="filling">
               <option ' . (($postObject->filling === "1") ? "selected" : "") . '>1</option>
               <option ' . (($postObject->filling === "2") ? "selected" : "") . '>2</option>
               <option ' . (($postObject->filling === "3") ? "selected" : "") . '>3</option>
@@ -103,10 +103,8 @@ if (session_status() == PHP_SESSION_NONE) {
             <textarea class="input100" name="description" placeholder="Your description here...">' . $postObject->description . '"</textarea>
             <span class="focus-input100"></span>
           </div>
-          <div>
-          <img src="' . $imgPath . '" alt="konserve" style="width: 300px;>
-          </div>
-          <div class="wrap-input100 validate-input">
+            <img src="' . $imgPath . '" alt="konserve" style="width: 300px;>
+          <div class="wrap-input100">
             <span class="label-input100">Bild</span>
             <input type="file" name="image">
             <span class="focus-input100"></span>
@@ -128,11 +126,9 @@ if (session_status() == PHP_SESSION_NONE) {
         </form>
       </div>
     </div>';
-  } else {
+} else {
     header("Location: http://localhost/konserven-test.de/public/"); // $_SERVER['HTTP_HOST']
-  }
-  ?>
+}
+?>
 
 </body>
-
-</html>

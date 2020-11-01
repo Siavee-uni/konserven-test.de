@@ -1,19 +1,20 @@
 <?php
 if (session_status() == PHP_SESSION_NONE) {
-  session_start();
+    session_start();
 }
 ?>
 <!DOCTYPE html>
 
 <head>
-  <!--===============================================================================================-->
-  <link rel="stylesheet" type="text/css" href="../css/input_form.css">
-  <!--===============================================================================================-->
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="../css/input_form.css">
+    <title>form</title>
+    <!--===============================================================================================-->
 </head>
 
 <body>
-  <?php
-  $postForm = '
+<?php
+$postForm = '
 <div class="container-contact100">
   <div class="wrap-contact100">
     <form class="contact100-form validate-form" action="../api/post.php" method="POST" enctype="multipart/form-data">
@@ -99,14 +100,11 @@ if (session_status() == PHP_SESSION_NONE) {
   </div>
 </div>';
 
-  // echo postform
-  if ($_SESSION["login"]) {
+// echo postform
+if ($_SESSION["login"]) {
     echo $postForm;
-  } else {
-    header("Location: http://localhost/konserven-test.de/public/"); // $_SERVER['HTTP_HOST']
-  }
-  ?>
-
+} else {
+    header("Location: https://www.konserven-tests.de"); // $_SERVER['HTTP_HOST']
+}
+?>
 </body>
-
-</html>

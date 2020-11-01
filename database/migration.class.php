@@ -1,10 +1,11 @@
 <?php
 include_once 'database.class.php';
+
 class Migration extends Database
 {
 
-        public function migrate()
-        {
+    public function migrate()
+    {
 
         $createTableCon = "CREATE TABLE IF NOT EXISTS `konserven` (
         `id` int(11) NOT NULL AUTO_INCREMENT,
@@ -23,15 +24,18 @@ class Migration extends Database
         ) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=19";
 
         $this->conn->exec($createTableCon);
-                
-        }
-        public function addColumn() {
+
+    }
+
+    public function addColumn()
+    {
 
         $createTableCon = "
         ALTER TABLE `konserven`
-        ADD `brand` varchar(256) NOT NULL";
-        
+        ADD `brand` varchar(256) NOT NULL,
+        ADD `url` varchar(256) NOT NULL";
+
         $this->conn->exec($createTableCon);
-                                
-        }
+
+    }
 }

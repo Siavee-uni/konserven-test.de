@@ -1,11 +1,9 @@
 <?php
 if (session_status() == PHP_SESSION_NONE) {
-	session_start();
+    session_start();
 }
-if (isset($_SESSION['login'])) {
-	$_SESSION["login"] = $_SESSION["login"];
-} else {
-	$_SESSION["login"] = false;
+if (!isset($_SESSION['login'])) {
+    $_SESSION["login"] = false;
 }
 ?>
 <?php
