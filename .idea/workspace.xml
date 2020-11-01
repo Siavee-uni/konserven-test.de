@@ -20,54 +20,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="099ab5fa-a30f-4664-a9bb-1a11e06cfdb6" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/codeStyles/codeStyleConfig.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/konserven-test.de.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sqldialects.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/env.example.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/env.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/uploads/28315602_digital-image.jfif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/uploads/30628021_digital-image.jfif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/uploads/4012344902069.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/uploads/4058172469510-2093283_org.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/uploads/4104420020481.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/uploads/4104420142282.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/uploads/618YFnowX9L._SL1000_.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/uploads/7190510_digital-image.jfif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/uploads/71fm7HfjaOL._SX522_.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/uploads/81fJeDIhlRL._SL1500_.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/uploads/IMG_5478.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/uploads/cup-of-instant-ramen-with-spicy-curry-flavor-nissin-cup-noodle.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/uploads/fafasf.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/uploads/fs_suppe_gulaschsuppe_mit-schatten_digital_540x540_icon.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/uploads/mam_3703361_produktfoto_produktbild_no_resize_normal_1.5.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/uploads/mam_6137649_produktfoto_produktbild_no_resize_normal_1.4.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/database.class.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/database.class.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migration.class.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migration.class.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/htaccess" beforeDir="false" afterPath="$PROJECT_DIR$/public/.htaccess" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/api/delete.php" beforeDir="false" afterPath="$PROJECT_DIR$/public/api/delete.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/api/post.php" beforeDir="false" afterPath="$PROJECT_DIR$/public/api/post.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/api/update.php" beforeDir="false" afterPath="$PROJECT_DIR$/public/api/update.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/components/edit_form.php" beforeDir="false" afterPath="$PROJECT_DIR$/public/components/edit_form.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/components/footer.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/components/footer.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/components/form.php" beforeDir="false" afterPath="$PROJECT_DIR$/public/components/form.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/components/header.php" beforeDir="false" afterPath="$PROJECT_DIR$/public/components/header.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/components/list.php" beforeDir="false" afterPath="$PROJECT_DIR$/public/components/list.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/css/main.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/main.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/css/materialize/css/materialize.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/materialize/css/materialize.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/css/materialize/css/materialize.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/materialize/css/materialize.min.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/datenschutzerklärung.php" beforeDir="false" afterPath="$PROJECT_DIR$/public/datenschutzerklärung.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/impressum.php" beforeDir="false" afterPath="$PROJECT_DIR$/public/impressum.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/public/index.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/js/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/main.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/login.php" beforeDir="false" afterPath="$PROJECT_DIR$/public/login.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/produkte.php" beforeDir="false" afterPath="$PROJECT_DIR$/public/produkte.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/codeStyles/codeStyleConfig.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/konserven-test.de.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sqldialects.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -122,7 +82,7 @@
       <workItem from="1604180293221" duration="1231000" />
       <workItem from="1604236753864" duration="3249000" />
       <workItem from="1604242374788" duration="770000" />
-      <workItem from="1604255381877" duration="2980000" />
+      <workItem from="1604255381877" duration="3304000" />
     </task>
     <servers />
   </component>
