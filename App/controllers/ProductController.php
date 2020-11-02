@@ -1,14 +1,13 @@
 <?php
 include_once dirname(__DIR__, 1) . '/models/Product.php';
 include_once dirname(__DIR__, 1) . '/config/database.php';
+
 class ProductController
 {
     private $db;
-    /**
-     * @var mixed
-     */
 
-    public function __construct() {
+    public function __construct()
+    {
         $connection = new Database();
         $this->db = $connection->connect();
     }
@@ -28,7 +27,7 @@ class ProductController
         ];
 
         $product = new Product($this->db);
-        if( $product->create($data)) {
+        if ($product->create($data)) {
             // file upload
             $target_dir = "../uploads/";
             $target_file = $target_dir . basename($_FILES["image"]["name"]);
@@ -85,14 +84,16 @@ class ProductController
         $product->score = $_POST["score"];
         $product->id = $_POST["id"];
         $product->brand = $_POST["brand"];
+        $product->image = basename($_FILES["image"]["name"]);
 
+        $fileName = $product->readSingleID()->image;
         if ($product->update()) {
+            // delete file
+            $filePath = "../uploads/" . $fileName;
+            unlink($filePath);
             // file upload
-            /* $target_dir = "../uploads/";
-            $target_file = $target_dir . basename($_FILES["image"]["name"]);
-            $imageFileType = strtolower(pathinfo($target_file, PATHINFO_EXTENSION)); */
-
-            /* move_uploaded_file($_FILES["image"]["tmp_name"], $target_file); */
+            $target_file = "../uploads/" . $product->image;
+            move_uploaded_file($_FILES["image"]["tmp_name"], $target_file);
             return true;
         } else {
             return false;

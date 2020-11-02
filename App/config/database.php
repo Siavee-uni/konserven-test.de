@@ -2,7 +2,8 @@
 
 include_once dirname(__DIR__, 2) . '/env.php';
 
-class Database {
+class Database
+{
     // DB Params
     protected $conn;
 

@@ -1,6 +1,6 @@
 <?php
 
-include_once dirname(__DIR__, 1). '/controllers/ProductController.php';
+include_once dirname(__DIR__, 1) . '/controllers/ProductController.php';
 
 $controller = new ProductController;
 $data = $controller->filterList();

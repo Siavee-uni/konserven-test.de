@@ -4,10 +4,9 @@ include_once dirname(__DIR__, 1) . '/config/database.php';
 class Product
 {
     // DB
-    private $conn;
+    public $id;
 
     // Table Properties
-    public $id;
     public $name;
     public $brand;
     public $bio;
@@ -17,11 +16,12 @@ class Product
     public $score;
     public $image;
     public $url;
-    public $column;
-    public $value;
+    private $conn;
 
     // Constructor with DB
-    public function __construct($db) {
+
+    public function __construct($db)
+    {
         $this->conn = $db;
     }
 
@@ -58,6 +58,7 @@ class Product
         $stmt->execute();
         return $stmt->fetchObject();
     }
+
     function readSingleUrl()
     {
         $sql = 'SELECT * FROM `konserven` WHERE url = :url';
@@ -76,11 +77,11 @@ class Product
     {
 
         $query = "UPDATE konserven
-    SET name = :name, brand = :brand, bio = :bio, 
-    vegan = :vegan, description = :description, 
-    filling = :filling, score = :score
-    WHERE
-    id = :id";
+                SET name = :name, brand = :brand, bio = :bio, 
+                vegan = :vegan, description = :description, 
+                filling = :filling, score = :score, image = :image
+                WHERE
+                id = :id";
 
         // Prepare Statement
         $stmt = $this->conn->prepare($query);
@@ -94,6 +95,7 @@ class Product
         $stmt->bindParam(':filling', $this->filling);
         $stmt->bindParam(':score', $this->score);
         $stmt->bindParam(':id', $this->id);
+        $stmt->bindParam(':image', $this->image);
 
         // Execute query
         if ($stmt->execute()) {

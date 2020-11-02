@@ -1,7 +1,7 @@
 <?php
 if (session_status() == PHP_SESSION_NONE) {
     session_start();
-  }
+}
 $server = "http://$_SERVER[HTTP_HOST]";
 if ($_SESSION["login"] && ($_SERVER['REQUEST_METHOD'] == 'POST')) {
 

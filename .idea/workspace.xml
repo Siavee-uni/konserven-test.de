@@ -22,11 +22,11 @@
     <list default="true" id="80b46375-d23d-4231-805a-5e24993c75f3" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/App/api/delete.php" beforeDir="false" afterPath="$PROJECT_DIR$/App/api/delete.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/App/api/post.php" beforeDir="false" afterPath="$PROJECT_DIR$/App/api/post.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/App/api/update.php" beforeDir="false" afterPath="$PROJECT_DIR$/App/api/update.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/App/components/edit_form.php" beforeDir="false" afterPath="$PROJECT_DIR$/App/components/edit_form.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/App/components/datenschutzerklärung.html" beforeDir="false" afterPath="$PROJECT_DIR$/App/components/datenschutzerklärung.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/App/controllers/ProductController.php" beforeDir="false" afterPath="$PROJECT_DIR$/App/controllers/ProductController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/App/models/Product.php" beforeDir="false" afterPath="$PROJECT_DIR$/App/models/Product.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/App/uploads/mam_3703361_produktfoto_produktbild_no_resize_normal_1.5.jpg" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -53,6 +53,7 @@
     <property name="node.js.path.for.package.tslint" value="project" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
+    <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
@@ -65,7 +66,8 @@
       <option name="presentableId" value="Default" />
       <updated>1604260565967</updated>
       <workItem from="1604260567037" duration="3546000" />
-      <workItem from="1604325865035" duration="3648000" />
+      <workItem from="1604325865035" duration="3827000" />
+      <workItem from="1604343469240" duration="1848000" />
     </task>
     <servers />
   </component>
@@ -85,17 +87,26 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="WindowStateProjectService">
+    <state x="336" y="356" key="#SQL_Dialects" timestamp="1604344821153">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="336" y="356" key="#SQL_Dialects/0.0.1920.1040@0.0.1920.1040" timestamp="1604344821153" />
     <state x="552" y="178" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1604329000665">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="552" y="178" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1040/1920.0.1024.728@0.0.1920.1040" timestamp="1604329000665" />
-    <state x="469" y="251" key="SettingsEditor" timestamp="1604326033600">
+    <state x="469" y="251" key="SettingsEditor" timestamp="1604344575714">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="469" y="251" key="SettingsEditor/0.0.1920.1040/1920.0.1024.728@0.0.1920.1040" timestamp="1604326033600" />
+    <state x="469" y="251" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1604344575714" />
     <state x="668" y="237" width="583" height="566" key="find.popup" timestamp="1604325958241">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="668" y="237" width="583" height="566" key="find.popup/0.0.1920.1040/1920.0.1024.728@0.0.1920.1040" timestamp="1604325958241" />
+    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup" timestamp="1604344119193">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1604344119193" />
   </component>
 </project>
