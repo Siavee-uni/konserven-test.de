@@ -20,61 +20,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="80b46375-d23d-4231-805a-5e24993c75f3" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/App/components/session.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/App/config/database.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/App/controllers/ProductController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/App/models/Product.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/database.class.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migration.class.php" beforeDir="false" afterPath="$PROJECT_DIR$/App/migrations/migration.class.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/.htaccess" beforeDir="false" afterPath="$PROJECT_DIR$/App/.htaccess" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/api/delete.php" beforeDir="false" afterPath="$PROJECT_DIR$/App/api/delete.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/api/post.php" beforeDir="false" afterPath="$PROJECT_DIR$/App/api/post.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/api/update.php" beforeDir="false" afterPath="$PROJECT_DIR$/App/api/update.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/components/about.html" beforeDir="false" afterPath="$PROJECT_DIR$/App/components/about.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/components/datenschutzerklärung.html" beforeDir="false" afterPath="$PROJECT_DIR$/App/components/datenschutzerklärung.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/components/edit_form.php" beforeDir="false" afterPath="$PROJECT_DIR$/App/components/edit_form.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/components/footer.html" beforeDir="false" afterPath="$PROJECT_DIR$/App/components/footer.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/components/form.php" beforeDir="false" afterPath="$PROJECT_DIR$/App/components/form.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/components/header.php" beforeDir="false" afterPath="$PROJECT_DIR$/App/components/header.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/components/impressum.html" beforeDir="false" afterPath="$PROJECT_DIR$/App/components/impressum.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/components/info_box.html" beforeDir="false" afterPath="$PROJECT_DIR$/App/components/info_box.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/components/list.php" beforeDir="false" afterPath="$PROJECT_DIR$/App/components/list.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/css/input_form.css" beforeDir="false" afterPath="$PROJECT_DIR$/App/css/input_form.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/css/main.css" beforeDir="false" afterPath="$PROJECT_DIR$/App/css/main.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/css/materialize/LICENSE" beforeDir="false" afterPath="$PROJECT_DIR$/App/css/materialize/LICENSE" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/css/materialize/css/materialize.css" beforeDir="false" afterPath="$PROJECT_DIR$/App/css/materialize/css/materialize.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/css/materialize/css/materialize.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/App/css/materialize/css/materialize.min.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/css/materialize/js/materialize.js" beforeDir="false" afterPath="$PROJECT_DIR$/App/css/materialize/js/materialize.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/css/materialize/js/materialize.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/App/css/materialize/js/materialize.min.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/css/single_product.css" beforeDir="false" afterPath="$PROJECT_DIR$/App/css/single_product.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/datenschutzerklärung.php" beforeDir="false" afterPath="$PROJECT_DIR$/App/datenschutzerklärung.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/img/bio.png" beforeDir="false" afterPath="$PROJECT_DIR$/App/img/bio.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/img/konserven-test-logo.png" beforeDir="false" afterPath="$PROJECT_DIR$/App/img/konserven-test-logo.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/img/vegan.png" beforeDir="false" afterPath="$PROJECT_DIR$/App/img/vegan.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/impressum.php" beforeDir="false" afterPath="$PROJECT_DIR$/App/impressum.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/App/index.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/js/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/App/js/main.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/login.php" beforeDir="false" afterPath="$PROJECT_DIR$/App/login.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/produkte.php" beforeDir="false" afterPath="$PROJECT_DIR$/App/produkte.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/uploads/28315602_digital-image.jfif" beforeDir="false" afterPath="$PROJECT_DIR$/App/uploads/28315602_digital-image.jfif" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/uploads/30628021_digital-image.jfif" beforeDir="false" afterPath="$PROJECT_DIR$/App/uploads/30628021_digital-image.jfif" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/uploads/4012344902069.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/App/uploads/4012344902069.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/uploads/4058172469510-2093283_org.png" beforeDir="false" afterPath="$PROJECT_DIR$/App/uploads/4058172469510-2093283_org.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/uploads/4104420020481.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/App/uploads/4104420020481.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/uploads/4104420142282.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/App/uploads/4104420142282.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/uploads/618YFnowX9L._SL1000_.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/App/uploads/618YFnowX9L._SL1000_.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/uploads/7190510_digital-image.jfif" beforeDir="false" afterPath="$PROJECT_DIR$/App/uploads/7190510_digital-image.jfif" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/uploads/71fm7HfjaOL._SX522_.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/App/uploads/71fm7HfjaOL._SX522_.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/uploads/81fJeDIhlRL._SL1500_.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/App/uploads/81fJeDIhlRL._SL1500_.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/uploads/IMG_5478.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/App/uploads/IMG_5478.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/uploads/cup-of-instant-ramen-with-spicy-curry-flavor-nissin-cup-noodle.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/App/uploads/cup-of-instant-ramen-with-spicy-curry-flavor-nissin-cup-noodle.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/uploads/fafasf.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/App/uploads/fafasf.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/uploads/fs_suppe_gulaschsuppe_mit-schatten_digital_540x540_icon.png" beforeDir="false" afterPath="$PROJECT_DIR$/App/uploads/fs_suppe_gulaschsuppe_mit-schatten_digital_540x540_icon.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/uploads/mam_3703361_produktfoto_produktbild_no_resize_normal_1.5.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/App/uploads/mam_3703361_produktfoto_produktbild_no_resize_normal_1.5.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/uploads/mam_6137649_produktfoto_produktbild_no_resize_normal_1.4.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/App/uploads/mam_6137649_produktfoto_produktbild_no_resize_normal_1.4.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/App/api/delete.php" beforeDir="false" afterPath="$PROJECT_DIR$/App/api/delete.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/App/api/post.php" beforeDir="false" afterPath="$PROJECT_DIR$/App/api/post.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/App/api/update.php" beforeDir="false" afterPath="$PROJECT_DIR$/App/api/update.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/App/components/edit_form.php" beforeDir="false" afterPath="$PROJECT_DIR$/App/components/edit_form.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/App/controllers/ProductController.php" beforeDir="false" afterPath="$PROJECT_DIR$/App/controllers/ProductController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/App/models/Product.php" beforeDir="false" afterPath="$PROJECT_DIR$/App/models/Product.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -101,6 +53,7 @@
     <property name="node.js.path.for.package.tslint" value="project" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
@@ -112,6 +65,7 @@
       <option name="presentableId" value="Default" />
       <updated>1604260565967</updated>
       <workItem from="1604260567037" duration="3546000" />
+      <workItem from="1604325865035" duration="3648000" />
     </task>
     <servers />
   </component>
@@ -128,5 +82,20 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="552" y="178" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1604329000665">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="552" y="178" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1040/1920.0.1024.728@0.0.1920.1040" timestamp="1604329000665" />
+    <state x="469" y="251" key="SettingsEditor" timestamp="1604326033600">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="469" y="251" key="SettingsEditor/0.0.1920.1040/1920.0.1024.728@0.0.1920.1040" timestamp="1604326033600" />
+    <state x="668" y="237" width="583" height="566" key="find.popup" timestamp="1604325958241">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="668" y="237" width="583" height="566" key="find.popup/0.0.1920.1040/1920.0.1024.728@0.0.1920.1040" timestamp="1604325958241" />
   </component>
 </project>

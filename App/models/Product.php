@@ -109,6 +109,8 @@ class Product
 
         if ($stmt->execute()) {
             return true;
+        } else {
+            return false;
         }
     }
 
@@ -121,6 +123,8 @@ class Product
 
         if ($stmt->execute()) {
             return $stmt->fetchAll();
+        } else {
+            return false;
         }
     }
 }

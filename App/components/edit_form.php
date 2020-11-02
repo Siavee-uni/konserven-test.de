@@ -17,14 +17,13 @@ if (session_status() == PHP_SESSION_NONE) {
 // echo postform
 $server = "http://$_SERVER[HTTP_HOST]";
 if ($_SESSION["login"]) {
-    $url = dirname(__DIR__, 2);
-    include_once $url . '/database/database.class.php';
+    $url = dirname(__DIR__, 1);
+    include_once $url . '/controllers/ProductController.php';
 
     $id = $_POST["id"];
 
-    $connection = new Database;
-    $connection->id = $id;
-    $postObject = $connection->readSingle("id");
+    $post = new ProductController();
+    $postObject = $post->readSingle("id");
 
     if ($postObject->bio == 1) {
         $bioChecked = "checked";
@@ -99,13 +98,15 @@ if ($_SESSION["login"]) {
               </select>
             </div>
           </div>
-          <div class="wrap-input100 validate-input"">
+          <div class="wrap-input100 validate-input">
             <span class="label-input100">Beschreibung</span>
-            <textarea class="input100" name="description" placeholder="Your description here...">' . $postObject->description . '"</textarea>
+            <textarea class="input100" name="description">' . $postObject->description . '</textarea>
             <span class="focus-input100"></span>
           </div>
-            <img src="' . $imgPath . '" alt="konserve" style="width: 300px;>
           <div class="wrap-input100">
+            <img src="' . $imgPath . '" alt="konserve" style="width: 300px>
+          </div>
+          <div class="wrap-input100 validate-input">
             <span class="label-input100">Bild</span>
             <input type="file" name="image">
             <span class="focus-input100"></span>
